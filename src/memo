@@ -1,0 +1,16 @@
+tomcat에 수동 배포하는 법~~~
+
+# 빌드
+./gradlew build
+
+# war 내용 확인
+cd build/libs
+jar -xvf servlet-1.0-SNAPSHOT.war
+
+# war 배포
+tomcat/webapps/ 아래 모두 삭제
+servlet-1.0-SNAPSHOT.war 넣고 ROOT.war로 파일명 변경
+tomcat/bin/startup.bat 실행
+
+
+
